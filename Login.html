@@ -14,12 +14,12 @@
         body {
             background-color: black;
         }
-        .header{
+        .header {
             background-image: url(img/aa.jpg);
-			background-size: cover;
-			height: 500px;
+            background-size: cover;
+            padding-bottom: 50px;
+            /* height: 500px; */
         }
-
         nav {
             margin: auto;
             text-align: center;
@@ -145,15 +145,17 @@
             font-size: 8pt;
             margin: 20px 0;
         }
-        form button{
+        button{
             margin-top: 5px;
             padding: 7px 35px;
             background-color: #4ACEC9;
             border-radius: 15px;
+            text-decoration: none;
+            color: #fff;
         }
         
-        /* untuk ukuran layar 700px kebawah */
-        @media screen and (max-width: 780px) {
+/* untuk ukuran layar 700px kebawah */
+@media screen and (max-width: 780px) {
             * {
                 width: 100%;
                 margin: 0;
@@ -171,7 +173,7 @@
             }
 
             .header nav {
-                width: 25%;
+                width: 30%;
             }
 
             .header nav ul li img {
@@ -192,8 +194,42 @@
                 background-color: #5075ee;
                 border-bottom: 2px solid #5075ee;
             }
+
+        .form-group{
+            margin: 10px;
+            padding: 5px;
+            width: 200px;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 10px;
+            color: black;
         }
 
+            .socialmedia {
+                color: #fff;
+                float: none;
+                margin-left: 0px;
+                margin-top: 0px;
+
+            }
+            .contact {
+            color: #fff;
+            float: none;
+            margin-right: 0px;
+            margin-top: 0px;
+            padding-bottom: 20px;
+
+        }
+        .tulisan p {
+            font-size: 20pt;
+        }
+
+        .tulisan h1 {
+            font-size: 40pt;
+        }
+
+
+        }
     </style>
 
 </head>
@@ -208,21 +244,21 @@
                     </li>
                 </div>
                 <div class="tombolmaning">
-                    <li><a href="#" class="tombol">Sign Up</a></li>
+                    <li><a href="SignUp.html" class="tombol">Sign Up</a></li>
                     <li><a href="Login.html" class="tombol">Login</a></li>
-                    <li><a href="About_us.html" class="tombol_lain">About Us</a></li>
-                    <li><a href="Pelajaran.html" class="tombol_lain">Lessons</a></li>
+                    <li><a href="#" class="tombol_lain"onclick="alertAction()">About Us</a></li>
+                    <li><a href="#" class="tombol_lain"onclick="alertAction()">Lessons</a></li>
                     <li><a href="Home.html" class="tombol_lain">Home</a></li>
                 </div>
             </ul>
         </nav>
     <div class="content">
-        <form class="form">
+        <form class="form" name="login" action="HomeAkun.html" method="POST">
             <label for="text" style="font-size: 20pt;">Login</label><br>
-            <input type="text" id="username" class="form-group" placeholder="Username"><br>
-            <input type="password" id="password" class="form-group" placeholder="Password"><br>
+            <input type="text" id="username" class="form-group" placeholder="Username" name="username" required><br>
+            <input type="password" id="password" class="form-group" placeholder="Password" name="password" required><br>
             <input type="checkbox" class="remember">Remember me  <br>
-            <button type="submit" action="Home.html" >Login</button>
+            <button type="submit" onclick="if(document.forms['login'].checkValidity()){event.preventDefault();document.forms['login'].submit();}else{event.preventDefault();alert('Mohon periksa kembali isian');}">Login</button>
             
         </form>
     </div>
@@ -248,5 +284,25 @@
             </div>
         </div>
     </div>
+    <script>
+            function alertAction() {
+              alert("Silahkan Login Atau Sign Up Terlebih Dahulu");
+            }
+
+            function validate(){
+                event.preventDefault();
+                console.log('tes');
+                var uname = document.forms["login"]["username"].value;
+                var pass = document.forms["login"]["password"].value;
+                if(uname=="" || pass=""){
+                    event.preventDefault();
+                    alert('Data kosong\nmohon periksa kembali isian');
+                }
+                else{
+                    alert('Login');
+                }
+            }
+    
+            </script>
 </body>
 </html>

@@ -6,25 +6,27 @@
     <link rel="shortcut icon" href="img/13.png">
     <style>
         * {
-            margin:0;
+            margin: 0;
             padding: 0;
             font-family: Fira sans, sans-serif;
         }
 
         body {
-            background-color: black;
+            background-color: white;
         }
-        .header{
+
+        .header {
             background-image: url(img/aa.jpg);
-			background-size: cover;
-			height: 500px;
+            background-size: cover;
+            padding-bottom: 50px;
+            /* height: 500px; */
         }
 
         nav {
             margin: auto;
             text-align: center;
             width: 90%;
-            
+
 
         }
 
@@ -73,7 +75,7 @@
             border-bottom: 2px solid #5075ee;
         }
 
-    
+
         nav ul li a {
             display: block;
             padding: 10px 20px;
@@ -87,9 +89,39 @@
             padding: 10px 20px;
             text-align: center;
         }
-        .footer {
-            margin: 50px auto 0 auto;
+
+        .row .a {
             text-align: center;
+            float: left;
+            margin-left: 100px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .row .a img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .row .b {
+            text-align: center;
+            float: right;
+            margin-right: 100px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .row .b img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer {
+            background-color: #000;
+            margin: 0px auto 0 auto;
+            text-align: center;
+            clear: both;
+            padding-bottom: 5px;
         }
 
         .socialmedia {
@@ -110,9 +142,11 @@
         }
 
         .meidapartner {
+            padding-top: 20px;
             color: #fff;
             margin-bottom: 30px;
         }
+
         .meidapartner img {
             width: 100px;
             height: 70px;
@@ -125,23 +159,29 @@
             margin-top: -90px;
 
         }
+
         .tulisan {
             color: #fff;
             text-align: center;
-            margin-top: 80px;
+            margin-top: 100px;
         }
-        .tulisan p{
+
+        .tulisan p {
             font-size: 30pt;
         }
-        .tulisan h1{
+
+        .tulisan h1 {
             font-size: 40pt;
         }
-        .tulisan form input{
+
+        .tulisan form input {
             width: 45%;
             height: 35px;
             font-size: 16pt;
             border-radius: 10px;
         }
+
+
         /* untuk ukuran layar 700px kebawah */
         @media screen and (max-width: 780px) {
             * {
@@ -161,7 +201,7 @@
             }
 
             .header nav {
-                width: 25%;
+                width: 30%;
             }
 
             .header nav ul li img {
@@ -182,8 +222,32 @@
                 background-color: #5075ee;
                 border-bottom: 2px solid #5075ee;
             }
+
+            .socialmedia {
+                color: #fff;
+                float: none;
+                margin-left: 0px;
+                margin-top: 0px;
+
+            }
+            .contact {
+            color: #fff;
+            float: none;
+            margin-right: 0px;
+            margin-top: 0px;
+            padding-bottom: 20px;
+
+        }
+        .tulisan p {
+            font-size: 20pt;
         }
 
+        .tulisan h1 {
+            font-size: 40pt;
+        }
+
+
+        }
     </style>
 
 </head>
@@ -198,11 +262,10 @@
                     </li>
                 </div>
                 <div class="tombolmaning">
-                    <li><a href="#" class="tombol">Sign Up</a></li>
-                    <li><a href="Login.html" class="tombol">Login</a></li>
+                    <li><a href="Home.html" class="tombol">Log Out</a></li>
                     <li><a href="About_us.html" class="tombol_lain">About Us</a></li>
                     <li><a href="Pelajaran.html" class="tombol_lain">Lessons</a></li>
-                    <li><a href="Home.html" class="tombol_lain">Home</a></li>
+                    <li><a href="HomeAkun.html" class="tombol_lain">Home</a></li>
                 </div>
             </ul>
         </nav>

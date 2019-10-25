@@ -5,6 +5,7 @@
 <head>
     <title>Yash Academy</title>
     <link rel="shortcut icon" href="img/13.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         * {
             margin: 0;
@@ -13,13 +14,14 @@
         }
 
         body {
-            background-color: black;
+            background-color: white;
         }
 
         .header {
             background-image: url(img/aa.jpg);
             background-size: cover;
-            height: 500px;
+            padding-bottom: 50px;
+            /* height: 500px; */
         }
 
         nav {
@@ -91,14 +93,45 @@
         }
 
         .content {
-            height: 210px;
             background-color: white;
+            background-size: contain;
+            padding-top: 10px;
+            /* height: 210px; */
 
         }
 
-        .footer {
-            margin: 50px auto 0 auto;
+        .row .a {
             text-align: center;
+            float: left;
+            margin-left: 100px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .row .a img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .row .b {
+            text-align: center;
+            float: right;
+            margin-right: 100px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .row .b img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .footer {
+            background-color: #000;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            clear: both;
+            padding-bottom: 5px;
         }
 
         .socialmedia {
@@ -119,6 +152,7 @@
         }
 
         .meidapartner {
+            padding-top: 20px;
             color: #fff;
             margin-bottom: 30px;
         }
@@ -156,6 +190,7 @@
             font-size: 16pt;
             border-radius: 10px;
         }
+
 
         /* untuk ukuran layar 700px kebawah */
         @media screen and (max-width: 780px) {
@@ -198,6 +233,43 @@
                 border-bottom: 2px solid #5075ee;
             }
 
+            .content {
+                padding-bottom: 20px;
+            }
+
+            .row .a {
+                float: none;
+                margin: 20px auto;
+            }
+
+            .row .b {
+                float: none;
+                margin: 20px auto;
+            }
+
+            .socialmedia {
+                color: #fff;
+                float: none;
+                margin-left: 0px;
+                margin-top: 0px;
+
+            }
+            .contact {
+            color: #fff;
+            float: none;
+            margin-right: 0px;
+            margin-top: 0px;
+            padding-bottom: 20px;
+
+        }
+        .tulisan p {
+            font-size: 20pt;
+        }
+
+        .tulisan h1 {
+            font-size: 40pt;
+        }
+
 
         }
     </style>
@@ -214,16 +286,16 @@
                     </li>
                 </div>
                 <div class="tombolmaning">
-                    <li><a href="#" class="tombol">Sign Up</a></li>
+                    <li><a href="SignUp.html" class="tombol">Sign Up</a></li>
                     <li><a href="Login.html" class="tombol">Login</a></li>
-                    <li><a href="About_us.html" class="tombol_lain">About Us</a></li>
-                    <li><a href="Pelajaran.html" class="tombol_lain">Lessons</a></li>
-                    <li><a href="Home_.html" class="tombol_lain">Home</a></li>
+                    <li><a href="#" class="tombol_lain" onclick="alertAction()">About Us</a></li>
+                    <li><a href="#" class="tombol_lain" onclick="alertAction()">Lessons</a></li>
+                    <li><a href="Home.html" class="tombol_lain">Home</a></li>
                 </div>
             </ul>
         </nav>
         <div class="tulisan">
-            <h1>Walcome To Yash academy</h1>
+            <h1>Welcome To Yash academy</h1>
             <form>
                 <input type="text" placeholder="Search">
             </form>
@@ -236,14 +308,14 @@
     <div class="content">
         <div class="row">
 
-            <div class="a" style="text-align: center; float: left; margin-left: 100px; margin-top: 50px;">
-                <img src="img/13.png" style="width: 40px; height: 40px;">
+            <div class="a">
+                <img src="img/13.png">
                 <h3><strong>Yash academy</strong></h3>
                 Sebuah website e-learning yang membantu siswa belajar <br>
                 dengan menyajikan soal-soal beserta pembahasannya.
             </div>
-            <div class="b" style="text-align: center; float: right; margin-right: 100px; margin-top: 50px;">
-                <img src="img/12.png" style="width: 40px; height: 40px;">
+            <div class="b">
+                <img src="img/12.png">
                 <h3><strong>Pembelajaran pribadi</strong></h3>
                 siswa berlatih dengan temponya sendiri, Mereka mulai memahami <br>
                 hal-hal yang belum mereka mengerti.
@@ -269,7 +341,13 @@
             <h5>Contact Us</h5>Yash_Academy.ac.id</p>
         </div>
     </div>
-    </div>
+    <script>
+        function alertAction() {
+            alert("Silahkan Login Atau Sign Up Terlebih Dahulu");
+        }
+
+    </script>
+
 </body>
 
 </html>
